@@ -1,0 +1,139 @@
+/* ===== LAYOUT ===== */
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f8f5;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 20px 30px;
+}
+
+/* ===== TABS ===== */
+.tabs {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.tab {
+  margin: 0 8px !important;
+  border-radius: 20px !important;
+  border: 1px solid #1f3d2b !important;
+  color: #1f3d2b !important;
+}
+
+.tab.active {
+  background: #2e7d32 !important;
+  color: white !important;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.title {
+  font-weight: bold !important;
+  color: #1f3d2b;
+}
+
+/* ===== CARD ===== */
+.menu-card {
+  border-radius: 12px !important;
+  transition: 0.3s ease;
+  width: 250px;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.food-name {
+  font-weight: bold !important;
+  margin-bottom: 5px !important;
+}
+
+.food-desc {
+  color: gray;
+  font-size: 14px;
+}
+
+.price {
+  color: green;
+  font-weight: bold !important;
+  margin-top: 8px !important;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* ADD BUTTON */
+.addbtn {
+  background-color: #2e7d32 !important;
+  color: white !important;
+}
+
+.addbtn:hover {
+  background-color: #1b5e20 !important;
+}
+
+/* EDIT BUTTON */
+.editbtn {
+  background-color: #2e7d32 !important;
+  color: white !important;
+}
+
+.editbtn:hover {
+  background-color: #1b5e20 !important;
+}
+
+/* ===== DIALOG ===== */
+.dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.preview {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .content {
+    padding: 15px;
+  }
+
+  .header {
+     display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+
+  }
+
+  .tabs {
+    text-align: left;
+  }
+  .menu-card{
+    width: 320px;
+  }
+}

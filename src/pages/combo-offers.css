@@ -1,0 +1,203 @@
+/* ====== LAYOUT ====== */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9fafc;
+}
+
+
+/* ====== TABS ====== */
+
+.tabs {
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  margin-right: 10px;
+  text-transform: capitalize;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+
+/* ====== HEADER ====== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header h4 {
+  font-weight: 700;
+  color: #333;
+}
+
+
+/* ====== TABLE STYLING ====== */
+
+.MuiTableContainer-root {
+  border-radius: 12px !important;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+.MuiTableHead-root {
+  background-color: #eef2f7 !important;
+}
+
+.MuiTableHead-root th {
+  font-weight: 700 !important;
+  color: #333 !important;
+  font-size: 14px !important;
+}
+
+.MuiTableBody-root tr {
+  transition: all 0.3s ease;
+}
+
+.MuiTableBody-root tr:hover {
+  background-color: #f1f5ff !important;
+}
+
+.MuiTableCell-root {
+  font-size: 14px !important;
+}
+
+
+/* ====== IMAGE COLUMN ====== */
+
+.MuiTableCell-root img {
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.MuiTableCell-root img:hover {
+  transform: scale(1.05);
+}
+
+
+/* ====== PRICE STYLING ====== */
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.discount-price {
+  color: #2e7d32;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+
+/* ====== BUTTON STYLING ====== */
+
+.MuiButton-contained {
+  border-radius: 8px !important;
+  text-transform: capitalize !important;
+  font-weight: 600 !important;
+}
+
+.editbtn {
+  background-color: #484d48 !important;
+  color: white !important;
+}
+
+.addbtn {
+  background-color: #2e7d32 !important;
+  color: white !important;
+}
+
+.addbtn:hover {
+  background-color: #1b5e20 !important;
+}
+
+.tabs {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.tab {
+  margin: 0 8px !important;
+  border-radius: 20px !important;
+  border: 1px solid #1f3d2b !important;
+  color: #1f3d2b !important;
+}
+
+.tab.active {
+  background: #2e7d32 !important;
+  color: white !important;
+}
+
+.MuiButton-contained:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.MuiButton-outlined {
+  border-radius: 8px !important;
+  text-transform: capitalize !important;
+}
+
+
+/* ====== DIALOG STYLING ====== */
+
+.MuiDialog-paper {
+  border-radius: 12px !important;
+  padding: 10px;
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+/* ====== IMAGE PREVIEW ====== */
+
+.preview {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+}
+
+
+/* ====== DELETE DIALOG TEXT ====== */
+
+.MuiDialogContent-root b {
+  color: #d32f2f;
+}
+
+
+
+
+/* ====== RESPONSIVE ====== */
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .MuiTableCell-root {
+    font-size: 12px !important;
+  }
+
+  .MuiButton-contained {
+    font-size: 12px !important;
+  }
+}

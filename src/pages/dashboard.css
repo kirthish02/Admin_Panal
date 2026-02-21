@@ -1,0 +1,146 @@
+/* Layout */
+.layout {
+  display: flex;
+}
+
+.main {
+  flex-grow: 1;
+  background: #f7f4ed;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/* Header */
+.pageHeader {
+  margin-bottom: 10px;
+  padding-top: 0;
+}
+
+.title {
+  font-weight: bold !important;
+}
+
+.subtitle {
+  color: gray;
+  font-size: 14px;
+}
+
+/* Stats */
+.statCard {
+  padding: 15px;
+  margin-right: 50px;
+  border-radius: 16px !important;
+  display: flex;
+  gap: 10px;
+  width: 200px;
+  height: 100px;
+  
+}
+
+.statContent {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.orange {
+  background: #ff9800 !important;
+}
+
+.green {
+  background: #4caf50 !important;
+}
+
+.blue {
+  background: #2196f3 !important;
+}
+
+.statNumber {
+  font-weight: bold !important;
+}
+
+.statLabel {
+  font-size: 13px;
+  color: gray;
+}
+
+/* Charts */
+.chartCard {
+  width: 370px;
+  height: 390px;
+  border-radius: 16px !important;
+  display:flexbox;
+}
+
+/* Table */
+.tableSection {
+  margin-top: 32px;
+}
+
+.tableTitle {
+  font-weight: bold !important;
+  margin-bottom: 12px;
+}
+
+.tableBox {
+  border-radius: 16px !important;
+  overflow-x: auto;
+}
+
+.tableHead {
+  background: #e6e0d4 !important;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .main {
+    padding: 12px;
+    width: 300px;
+  }
+
+  .title {
+    font-size: 18px !important;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .welcomeCard {
+    width: 100%;
+
+  }
+
+  .statContent {
+    gap: 12px;
+  }
+    .statCard {
+    width: 320px;
+
+  }
+  .chartCard {
+  width: 350px;
+  height: 390px;
+  border-radius: 16px !important;
+  display:flexbox;
+}
+  .tableSection {
+    width: 350px;
+
+  }
+
+  .avatar {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .statLabel {
+    font-size: 12px;
+  }
+}
