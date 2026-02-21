@@ -17,7 +17,7 @@ function Navbar() {
       }}
     >
       <Toolbar sx={{ display: "flex", justifyContent: "flex-end", gap: 2 }}>
-        <Typography>Kirthishn,bnmb</Typography>
+        <Typography>Kirthish</Typography>
 
         <Box>
           <Avatar src={userImg} sx={{ width: 40, height: 40 }} />
