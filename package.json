@@ -1,14 +1,16 @@
 {
   "name": "admin-panel",
+  "homepage": "https://kirthish02.github.io/Admin_Panal/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kirthish02.github.io/Admin_Panal/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy":"gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -17,6 +19,7 @@
     "@mui/material": "^7.3.8",
     "apexcharts": "^5.5.0",
     "axios": "^1.13.5",
+    "gh-pages": "^6.3.0",
     "react": "^19.2.0",
     "react-apexcharts": "^2.0.0",
     "react-dom": "^19.2.0",
