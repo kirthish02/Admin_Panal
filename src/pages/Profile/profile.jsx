@@ -11,8 +11,8 @@ import {
 } from "@mui/material";
 import "./profile.css";
 
-import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar/Sidebar";
+import Navbar from "../components/Navbar/Navbar";
 import userImg from "../assets/AV-1.jpg";
 
 function AdminProfile() {
