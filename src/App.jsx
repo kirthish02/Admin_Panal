@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
-import Signin from "./pages/Signin";
-import Dashboard from "./pages/Dashboard";
-import Users from "./pages/Users";
-import Menu from "./pages/menu";
-import Profile from "./pages/profile";
-import Combo from "./pages/combo-offers";
-import AddCombo from "./pages/AddCombo";
+import Signin from "./pages/Signin/Signin"
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Users from "./pages/Users/Users";
+import Menu from "./pages/Menu/menu";
+import Profile from "./pages/Profile/profile";
+import Combo from "./pages/Combo_offers/combo-offers";
+import AddCombo from "./pages/Addcombo/AddCombo";
 
 function App() {
   const defaultData = {
