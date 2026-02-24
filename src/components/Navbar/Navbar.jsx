@@ -10,6 +10,7 @@ function Navbar() {
       sx={{
         backgroundColor: "#f0f8ef",
         color: "black",
+        boxShadow:"none",
 
         // ⭐ responsive width
         width: { xs: "100%", sm: `calc(100% - ${drawerWidth}px)` },
