@@ -1,5 +1,5 @@
 import { AppBar, Toolbar, Typography, Avatar, Box } from "@mui/material";
-import userImg from "../assets/AV-1.jpg";
+import userImg from "../../assets/AV-1.jpg";
 
 const drawerWidth = 220;
 
