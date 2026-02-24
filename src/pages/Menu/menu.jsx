@@ -21,34 +21,34 @@ import Navbar from "../../components/Navbar/Navbar";
 import "./menu.css";
 
 // Breakfast images
-import b1 from "../assets/Breakfast_images/b1.webp";
-import b2 from "../assets/Breakfast_images/b2.jpg";
-import b3 from "../assets/Breakfast_images/b3.webp";
-import b4 from "../assets/Breakfast_images/b4.webp";
-import b5 from "../assets/Breakfast_images/b5.webp";
-import b6 from "../assets/Breakfast_images/b6.webp";
-import b7 from "../assets/Breakfast_images/b7.jpg";
-import b8 from "../assets/Breakfast_images/b8.jpg";
+import b1 from "../../assets/Breakfast_images/b1.webp";
+import b2 from "../../assets/Breakfast_images/b2.jpg";
+import b3 from "../../assets/Breakfast_images/b3.webp";
+import b4 from "../../assets/Breakfast_images/b4.webp";
+import b5 from "../../assets/Breakfast_images/b5.webp";
+import b6 from "../../assets/Breakfast_images/b6.webp";
+import b7 from "../../assets/Breakfast_images/b7.jpg";
+import b8 from "../../assets/Breakfast_images/b8.jpg";
 
 // Lunch images
-import l1 from "../assets/Lunch_images/l1.jpg";
-import l2 from "../assets/Lunch_images/l2.jpg";
-import l3 from "../assets/Lunch_images/l3.jpg";
-import l4 from "../assets/Lunch_images/l4.jpg";
-import l5 from "../assets/Lunch_images/l5.jpg";
-import l6 from "../assets/Lunch_images/l6.jpg";
-import l7 from "../assets/Lunch_images/l7.jpg";
-import l8 from "../assets/Lunch_images/l8.jpg";
+import l1 from "../../assets/Lunch_images/l1.jpg";
+import l2 from "../../assets/Lunch_images/l2.jpg";
+import l3 from "../../assets/Lunch_images/l3.jpg";
+import l4 from "../../assets/Lunch_images/l4.jpg";
+import l5 from "../../assets/Lunch_images/l5.jpg";
+import l6 from "../../assets/Lunch_images/l6.jpg";
+import l7 from "../../assets/Lunch_images/l7.jpg";
+import l8 from "../../assets/Lunch_images/l8.jpg";
 
 // Dinner images
-import d1 from "../assets/Dinner_images/d1.jpg";
-import d2 from "../assets/Dinner_images/d2.jpg";
-import d3 from "../assets/Dinner_images/d3.jpg";
-import d4 from "../assets/Dinner_images/d4.jpg";
-import d5 from "../assets/Dinner_images/d5.jpg";
-import d6 from "../assets/Dinner_images/d6.jpg";
-import d7 from "../assets/Dinner_images/d7.jpg";
-import d8 from "../assets/Dinner_images/d8.jpg";
+import d1 from "../../assets/Dinner_images/d1.jpg";
+import d2 from "../../assets/Dinner_images/d2.jpg";
+import d3 from "../../assets/Dinner_images/d3.jpg";
+import d4 from "../../assets/Dinner_images/d4.jpg";
+import d5 from "../../assets/Dinner_images/d5.jpg";
+import d6 from "../../assets/Dinner_images/d6.jpg";
+import d7 from "../../assets/Dinner_images/d7.jpg";
+import d8 from "../../assets/Dinner_images/d8.jpg";
 
 function Menu() {
   const [type, setType] = useState("breakfast");
