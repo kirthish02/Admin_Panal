@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
 import Signin from "./pages/Signin";
 import Dashboard from "./pages/Dashboard";
@@ -27,29 +27,24 @@ function App() {
     });
   };
 
-  // expose the raw setter so children can edit/delete as needed
   const updateComboData = setComboData;
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Signin />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route
-          path="/combo-offers"
-          element={
-            <Combo data={comboData} setData={updateComboData} />
-          }
-        />
-        <Route
-          path="/add-combo"
-          element={<AddCombo addCombos={addCombos} />}
-        />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Signin />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/users" element={<Users />} />
+      <Route path="/menu" element={<Menu />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route
+        path="/combo-offers"
+        element={<Combo data={comboData} setData={updateComboData} />}
+      />
+      <Route
+        path="/add-combo"
+        element={<AddCombo addCombos={addCombos} />}
+      />
+    </Routes>
   );
 }
 
