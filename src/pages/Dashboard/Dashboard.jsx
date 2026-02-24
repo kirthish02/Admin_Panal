@@ -22,8 +22,8 @@ import PeopleIcon from "@mui/icons-material/People";
 
 import Chart from "react-apexcharts";
 
-import Sidebar from "../components/Sidebar/Sidebar";
-import Navbar from "../components/Navbar/Navbar";
+import Sidebar from "../../components/Sidebar/Sidebar";
+import Navbar from "../../components/Navbar/Navbar";
 
 import "./dashboard.css";
 
