@@ -6,7 +6,6 @@ import {
   ListItemText,
   ListItemIcon,
   Toolbar,
-  Typography,
   Box,
   Divider,
   Button,
