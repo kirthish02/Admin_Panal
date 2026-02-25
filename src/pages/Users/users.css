@@ -1,0 +1,81 @@
+/* Layout */
+.usersLayout {
+  display: flex;
+  background: #f7f4ed;
+  min-height: 100vh;
+}
+
+.usersMain {
+  flex-grow: 1;
+  padding: 24px;
+}
+
+/* Header */
+.usersHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.usersTitle {
+  font-weight: bold !important;
+}
+
+/* Buttons */
+.addBtn {
+  background: #2e7d32 !important;
+}
+
+.editBtn {
+  background: #2e7d32 !important;
+}
+
+.deleteBtn {
+  background: #c62828 !important;
+}
+
+/* Search */
+.searchBox {
+  margin-bottom: 4px !important;
+}
+
+/* Table */
+.tableWrapper {
+  border-radius: 16px !important;
+  overflow-x: auto;
+}
+
+.tableHead {
+  background: #e6e0d4;
+}
+
+/* Dialog */
+.dialogContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+  .usersMain {
+    padding: 12px;
+    width: 300px;
+  }
+
+  .usersHeader {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .addBtn {
+    width: 350px;
+
+  }
+  .searchBox{
+    width: 350px;
+  }
+}

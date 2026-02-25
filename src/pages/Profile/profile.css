@@ -1,0 +1,168 @@
+/* MAIN LAYOUT */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+}
+
+/* PAGE TITLE */
+
+.section-header {
+  margin-bottom: 25px;
+}
+
+.page-title {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* CARDS */
+
+.profile-card{
+    width: 1150px;
+    height: 90px;
+  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  background-color: "#f0f8ef" !important;
+}
+.profile-card-1{
+    width: 1150px;
+    height: 170px;
+  padding: 30px;
+  padding-top: 10px;
+  margin-bottom: 30px;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  background-color: "#f0f8ef" !important;
+}
+.profile-card-2 {
+    width: 1150px;
+    height: 100px;
+  padding: 30px;
+  padding-top: 10px;
+  margin-bottom: 30px;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  background-color: "#f0f8ef" !important;
+}
+
+/* PROFILE HEADER */
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.profile-role {
+  font-size: 14px;
+  color: #6c757d;
+  margin-top: 4px;
+}
+
+/* CARD HEADER (Title + Edit) */
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* INFO GRID */
+
+.info-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 250px;
+  margin-bottom: 25px;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 6px;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* EDIT BUTTON */
+
+.edit-btn {
+  background-color: #2e7d32 !important;
+  color: white !important;
+  text-transform: none !important;
+  padding: 6px 18px !important;
+  border-radius: 8px !important;
+}
+
+.edit-btn:hover {
+  background-color: #1b5e20 !important;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Mobile View */
+@media (max-width: 768px) {
+
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-header {
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .info-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .profile-card{
+    padding: 20px;
+    width: 275px;
+    height: 200px;
+  }
+  .profile-card-1 {
+    padding: 20px;
+    width: 275px;
+    height: 500px;
+  }
+  .profile-card-2 {
+    padding: 20px;
+    width: 275px;
+    height: 300px;
+  }
+
+  .main-content {
+    padding: 15px;
+    flex: 1;
+  }
+  
+}
