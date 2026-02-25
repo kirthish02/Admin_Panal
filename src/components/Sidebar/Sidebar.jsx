@@ -4,6 +4,7 @@ import {
   List,
   ListItemButton,
   ListItemText,
+  ListItemIcon,
   Toolbar,
   Typography,
   Box,
@@ -12,17 +13,20 @@ import {
   IconButton,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { IoMdLogOut } from "react-icons/io";
+import HomeIcon from "@mui/icons-material/Home";
+import PeopleIcon from "@mui/icons-material/People";
+import PersonIcon from "@mui/icons-material/Person";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
+import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
-
-const width = 250;
+const drawerWidth = 260;
 
 function Sidebar() {
   const navigate = useNavigate();
   const location = useLocation();
-
-  // mobile open / close
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -33,157 +37,110 @@ function Sidebar() {
     navigate("/");
   };
 
+  const menuItems = [
+    { text: "Dashboard", icon: <HomeIcon />, path: "/dashboard" },
+    { text: "Users", icon: <PeopleIcon />, path: "/users" },
+    { text: "Menu", icon: <MenuBookIcon />, path: "/menu" },
+    { text: "Combo Offers", icon: <LocalOfferIcon />, path: "/combo-offers" },
+    { text: "My Profile", icon: <PersonIcon />, path: "/profile" },
+  ];
+
   const drawerContent = (
-    <>
-      {/* TOP AREA */}
+    <Box
+      sx={{
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        backgroundColor: "#d8f7d4",
+        color: "black",
+      }}
+    >
+      {/* TOP SECTION */}
       <Box>
         <Toolbar>
           <Box display="flex" alignItems="center" gap={1}>
-  <img src={logo} alt="KJS Logo" width="40" height="40" />
-  <Typography variant="h5">KJS Admin</Typography>
-</Box>
+            <img src={logo} alt="KJS Logo" width="200" height="70"/>
+          </Box>
         </Toolbar>
 
-        <Divider />
+        <Divider sx={{ backgroundColor: "#1f2937", mr:"15px", ml:"15px"}} />
 
-        <List>
-          <ListItemButton
-          component={Link}
-          to="/dashboard"
-          onClick={() => setMobileOpen(false)}
-          sx={{
-            border:
-            location.pathname === "/dashboard"
-            ? "2px solid darkgreen"
-            : "2px solid transparent",
-            borderRadius: "8px",
-            mx: 1,
-            textAlign: "center",
-            color:
-            location.pathname === "/dashboard"
-            ? "darkgreen"
-            : "black",
-            }}
-            >
-            <ListItemText primary="Dashboard" />
-          </ListItemButton>
+        <List sx={{ mt: 2 }}>
+          {menuItems.map((item) => {
+            const active = location.pathname === item.path;
 
-          <ListItemButton
-          component={Link}
-          to="/users"
-          onClick={() => setMobileOpen(false)}
-          sx={{
-            border:
-            location.pathname === "/users"
-            ? "2px solid darkgreen"
-            : "2px solid transparent",
-            borderRadius: "8px",
-            mx: 1,
-            textAlign: "center",
-            color:
-            location.pathname === "/users"
-            ? "darkgreen"
-            : "black",
-            }}
-            >
-            <ListItemText primary="Users" />
-          </ListItemButton>
+            return (
+              <ListItemButton
+                key={item.text}
+                component={Link}
+                to={item.path}
+                onClick={() => setMobileOpen(false)}
+                sx={{
+                  mx: 1,
+                  mb: 1,
+                  borderRadius: 2,
+                  position: "relative",
+                  backgroundColor: active ? "none" : "transparent",
+                  transition: "all 0.3s ease",
+                     
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    color: active ? "#22c55e" : "black",
+                    minWidth: 40,
+                  }}
+                >
+                  {item.icon}
+                </ListItemIcon>
 
-          <ListItemButton
-          component={Link}
-          to="/menu"
-          onClick={() => setMobileOpen(false)}
-          sx={{
-            border:
-            location.pathname === "/menu"
-            ? "2px solid darkgreen"
-            : "2px solid transparent",
-            borderRadius: "8px",
-            mx: 1,
-            textAlign: "center",
-            color:
-            location.pathname === "/menu"
-            ? "darkgreen"
-            : "black",
-            }}
-            >
-              
-            <ListItemText primary="Menu" />
-          </ListItemButton>
-
-          <ListItemButton
-          component={Link}
-          to="/combo-offers"
-          onClick={() => setMobileOpen(false)}
-          sx={{
-            border:
-            location.pathname === "/combo-offers"
-            ? "2px solid darkgreen"
-            : "2px solid transparent",
-            borderRadius: "8px",
-            mx: 1,
-            textAlign: "center",
-            color:
-            location.pathname === "/combo-offers"
-            ? "darkgreen"
-            : "black",
-            }}
-            >
-            <ListItemText primary="Combo Offers" />
-          </ListItemButton>
-
-          <ListItemButton
-          component={Link}
-          to="/profile"
-          onClick={() => setMobileOpen(false)}
-          sx={{
-            border:
-            location.pathname === "/profile"
-            ? "2px solid darkgreen"
-            : "2px solid transparent",
-            borderRadius: "8px",
-            mx: 1,
-            textAlign: "center",
-            color:
-            location.pathname === "/profile"
-            ? "darkgreen"
-            : "black",
-            }}
-            >
-            <ListItemText primary="My profile" />
-          </ListItemButton>
-          
+                <ListItemText
+                  primary={item.text}
+                  primaryTypographyProps={{
+                    fontSize: 14,
+                    fontWeight: active ? 600 : 400,
+                  }}
+                />
+              </ListItemButton>
+            );
+          })}
         </List>
       </Box>
 
-      {/* BOTTOM */}
+      {/* BOTTOM LOGOUT */}
       <Box sx={{ p: 2 }}>
+        <Divider sx={{ backgroundColor: "#1f2937", mb: 2 }} />
         <Button
-          variant="contained"
-          color="error"
           fullWidth
+          startIcon={<IoMdLogOut />}
           onClick={handleLogout}
+          sx={{
+            backgroundColor: "none",
+            color: "black",
+            textTransform: "none",
+            borderRadius: 2,
+            fontWeight: 500,
+          }}
         >
           Logout
         </Button>
-      </Box>
-    </>
+      </Box> 
+    </Box>
   );
 
   return (
     <>
       {/* MOBILE MENU BUTTON */}
       <IconButton
-        color="inherit"
-        edge="start"
         onClick={handleDrawerToggle}
         sx={{
-          display: { sm: "none" },  // hide in desktop
+          display: { sm: "none" },
           position: "fixed",
-          top: 10,
-          left: 10,
+          top: 15,
+          left: 15,
           zIndex: 1300,
-          color:"black"
+          color: "#111",
         }}
       >
         <MenuIcon />
@@ -197,13 +154,9 @@ function Sidebar() {
         sx={{
           display: { xs: "block", sm: "none" },
           "& .MuiDrawer-paper": {
-            width,
+            width: drawerWidth,
             boxSizing: "border-box",
-            backgroundColor: "#f0f8ef",
-            color: "black",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
+            borderRight: "none",
           },
         }}
       >
@@ -213,20 +166,16 @@ function Sidebar() {
       {/* DESKTOP DRAWER */}
       <Drawer
         variant="permanent"
+        open
         sx={{
           display: { xs: "none", sm: "block" },
-          width,
+          width: drawerWidth,
           "& .MuiDrawer-paper": {
-            width,
+            width: drawerWidth,
             boxSizing: "border-box",
-            backgroundColor: "#f0f8ef",
-            color: "black",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
+            borderRight: "none",
           },
         }}
-        open
       >
         {drawerContent}
       </Drawer>
